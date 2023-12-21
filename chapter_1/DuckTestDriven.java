@@ -9,5 +9,9 @@ public class DuckTestDriven {
     model.performFly(); // cannot fly here
     model.setFlyBehavior(new FlyRocketPowered());
     model.performFly(); // Fly like a rocket
+
+    DuckCall call = new DuckCall();
+    call.setQuackBehavior(new Quack());
+    call.performDuckCall();
   }
 }
