@@ -24,4 +24,14 @@ public abstract class Duck {
 
   public abstract void display();
 
+  // We created these setters so we can set and change the behavior of the duck in
+  // his quack and fly actions.
+  public void setFlyBehavior(FlyBehavior fb) {
+    this.flyBehavior = fb;
+  }
+
+  public void setQuackBehavior(QuackBehavior qb) {
+    this.quackBehavior = qb;
+  }
+
 }
