@@ -4,16 +4,22 @@
  */
 public abstract class Duck {
 
-  public void quack(String duckType) {
-    System.out.println(duckType + " duck is quacking!");
+  FlyBehavior flyBehavior;
+  QuackBehavior quackBehavior;
+
+  public Duck() {
+  }
+
+  public void performQuack() {
+    quackBehavior.quack();
+  }
+
+  public void performFly() {
+    flyBehavior.fly();
   }
 
   public void swim(String duckType) {
     System.out.println(duckType + " duck is swimming!");
-  }
-
-  public void fly(String duckType) {
-    System.out.println(duckType + " duck is flying!");
   }
 
   public abstract void display();
